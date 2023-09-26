@@ -1,6 +1,7 @@
 #! /usr/bin/env node
 import inquirer from "inquirer";
 import chalk from 'chalk';
+import gradient from 'gradient-string';
 console.log(chalk.black.bgYellow.bold("World's Greatest Calculator"));
 async function runCalculator() {
     const inputData = await inquirer.prompt([
@@ -55,7 +56,7 @@ async function runCalculator() {
         await runCalculator();
     }
     else {
-        console.log(chalk.bgYellow.black('Thank you for using World\'s greatest calculator. See you another time.'));
+        console.log(gradient.rainbow('Thank you for using World\'s greatest calculator. See you another time.'));
         process.exit();
     }
 }
